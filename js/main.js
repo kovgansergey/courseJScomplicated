@@ -1,15 +1,40 @@
 "use strict";
 
-let num = 266219;
-let arr = num.toString().split('');
-let multiplication = 1;
+// Задача 1
 
-arr.forEach(function(item) {
-  multiplication *= item;
-});
+let lang = prompt('Введите язык: ru или en');
+let ruDays = 'Понедельник, Вторник, Среда, Четверг, Пятница, Суббота, Воскресенье';
+let enDays = 'Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday';
 
-console.log('Произведение цифр числа: ', multiplication);
+console.log('Решение a');
+if (lang === 'ru') {
+  console.log(ruDays);
+} else if (lang === 'en') {
+  console.log(enDays);
+} else {
+  console.log('Вы ввели некоректный язык');
+}
 
-multiplication **= 3;
+console.log('Решение b');
+switch (lang) {
+  case 'ru':
+    console.log(ruDays);
+    break;
+  case 'en':
+    console.log(enDays);
+    break;
+  default:
+    console.log('Вы ввели некоректный язык');
+}
 
-alert(multiplication.toString().substring(0, 2));
+console.log('Решение c');
+let arr = [];
+arr[211] = enDays;
+arr[231] = ruDays;
+console.log(arr[lang.charCodeAt(0) + lang.charCodeAt(1)]);
+
+// Задача 2
+
+let namePerson = prompt('Введите имя');
+let result = namePerson === 'Артем' ? 'директор' : namePerson === 'Максим' ? 'преподаватель' : 'студент';
+console.log(result);
