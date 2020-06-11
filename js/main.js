@@ -29,9 +29,9 @@ switch (lang) {
 
 console.log('Решение c');
 let arr = [];
-arr[211] = enDays;
-arr[231] = ruDays;
-console.log(arr[lang.charCodeAt(0) + lang.charCodeAt(1)]);
+arr[101110] = enDays;
+arr[114117] = ruDays;
+console.log(arr[Number(String(lang.charCodeAt(0)) + String(lang.charCodeAt(1)))]);
 
 // Задача 2
 
