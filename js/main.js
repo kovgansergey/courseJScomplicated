@@ -60,18 +60,15 @@ function getTaskA(date) {
 }
 
 function getTaskB(date) {
-  let optionsDate = {
-    year: 'numeric',
-    month: 'numeric',
-    day: 'numeric',
-  };
-  let optionsTime = {
-    hour: 'numeric',
-    minute: 'numeric',
-    second: 'numeric'
+  function checkNumber(item) {
+    if (item <= 9) {
+      return '0' + item;
+    } 
+    return item;
   }
 
-  return date.toLocaleString('ru', optionsDate) + ' - ' + date.toLocaleString('ru', optionsTime);
+  return checkNumber(date.getDate()) + '.' + checkNumber(date.getMonth() + 1) + '.' + date.getFullYear() + ' - '
+        + checkNumber(date.getHours()) + ':' + checkNumber(date.getMinutes()) + ':' + checkNumber(date.getSeconds());
 }
 
 let taskA = document.createElement('p');
