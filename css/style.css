@@ -1,0 +1,10 @@
+.ball {
+  width: 100px;
+  position: absolute;
+  right: 900px;
+  top: 100px;
+}
+
+img {
+  width: 100%;
+}
